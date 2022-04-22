@@ -27,12 +27,15 @@ class _HomepageScreenState extends State<HomepageScreen> {
       appBar: AppBar(
         title: Text("Homepage"),
       ),
-      // body: ListView.builder(
-      //   itemCount: 5,
+      // https://www.melvinvivas.com/flutter-listview-example-using-data-from-a-rest-api
+      // body: ListView  {
+      // ListView.builder(
+      //   itemCount: surveyData,
       //   itemBuilder: (BuildContext context, int index) {
-      //     return ListTile(title: "$surveyData.",)
+      //     return ListTile(title: surveyData,)
       //   },
       // ),
+      // }
       // body: FutureBuilder<List<Survey>>(builder: ((context, snapshot) {
       //   if (snapshot.hasData) {
       //     return Text(snapshot.data);
