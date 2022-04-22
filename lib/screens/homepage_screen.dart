@@ -16,7 +16,7 @@ class _HomepageScreenState extends State<HomepageScreen> {
   void initState() {
     // TODO: implement initState
     surveyData = _auth.getSurveryList();
-    print(surveyData);
+    print('$surveyData');
 
     super.initState();
   }

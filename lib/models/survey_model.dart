@@ -1,4 +1,7 @@
-// import 'dart:convert';
+import 'dart:convert';
+
+Survey imgFromJson(String str) => Survey.fromJson(json.decode(str));
+String imgToJson(Survey data) => json.encode(data.toJson());
 
 class Survey {
   final String id;
@@ -15,4 +18,31 @@ class Survey {
       title: json['title'],
     );
   }
+  Map<String, dynamic> toJson() => {
+        "id": id,
+        "title": title,
+      };
 }
+
+// class Survey {
+//   String? id;
+//   String? title;
+
+//   Survey({
+//     this.id,
+//     this.title,
+//   });
+
+//   Survey.fromJson(Map<String, dynamic> json) {
+//     id = json['id'];
+//     title = json['title'];
+//   }
+
+//   Map<String, dynamic> toJson() {
+//     final Map<String, dynamic> data = <String, dynamic>{};
+//     data['id'] = id;
+//     data['title'] = title;
+
+//     return data;
+//   }
+// }

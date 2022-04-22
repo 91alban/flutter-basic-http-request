@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 import '../models/survey_model.dart';
 import 'package:http/http.dart' as http;
 
@@ -45,19 +46,27 @@ class ApiServices {
       'idNodo': '0',
       'authorization': basicAuth
     };
-    final response = await client.get(
+    var response = await client.get(
       Uri.parse(apiURL),
       headers: requsetHeaders,
     );
     if (response.statusCode == 200) {
-      List jsonString = jsonDecode(response.body);
+      var jsonString = json.decode(response.body) as List;
       print(jsonString);
-      return jsonString.map((job) => Survey.fromJson(job)).toList();
+      // return jsonString.map((job) => Survey.fromJson(job)).toList();
+      // List<Survey> convertedData = jsonString.map(i) => Survey.fromJson(i)
+      List<Survey> convertedData =
+          jsonString.map((i) => Survey.fromJson(i)).toList();
+      print('converted data $convertedData');
+      return convertedData;
+      // List<Survey> survey = List<Survey>.from(jsonString.map((model)=> Survey.fromJson(model)));
+      // Survey.fromJson(jsonString);
       // Survey.fromJson(jsonDecode(jsonString[0]));
 
       // List<Survey>.from(json(jsonString));
       // return convertedData;
     } else {
+      // return [];
       throw Exception('Failed to load data');
     }
   }
