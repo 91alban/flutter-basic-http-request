@@ -1,9 +1,6 @@
 import 'dart:convert';
-import 'dart:math';
-import 'package:e_check_survey/models/user_yt_tutorial.dart/user.dart';
-
-import '../models/survey_model.dart';
 import 'package:http/http.dart' as http;
+import 'package:e_check_survey/models/user_yt_tutorial.dart/user.dart';
 
 var client = http.Client();
 

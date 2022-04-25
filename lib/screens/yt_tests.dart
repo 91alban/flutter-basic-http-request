@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../models/user_yt_tutorial.dart/user.dart';
 
 class YtTests extends StatefulWidget {
-  YtTests({Key? key}) : super(key: key);
+  // YtTests({Key? key}) : super(key: key);
 
   @override
   State<YtTests> createState() => _YtTestsState();
@@ -76,7 +76,10 @@ class _YtTestsState extends State<YtTests> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => UserScreen(user.id)),
+                MaterialPageRoute(
+                    builder: (context) => UserScreen(
+                          userId: user.id,
+                        )),
               );
             },
           );

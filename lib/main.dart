@@ -2,7 +2,12 @@ import 'package:e_check_survey/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      // ChangeNotifierProvider(
+      //   create: (context) => Users(),
+      //   child: const MyApp(),
+      // ),
+      const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: const LoginScreen(),
     );
   }
 }
