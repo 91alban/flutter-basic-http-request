@@ -1,4 +1,5 @@
 import 'package:e_check_survey/screens/homepage_screen.dart';
+import 'package:e_check_survey/screens/yt_tests.dart';
 import 'package:flutter/material.dart';
 import 'package:e_check_survey/services/api_service.dart';
 
@@ -99,6 +100,21 @@ class _LoginScreenState extends State<LoginScreen> {
             //     )
             //   ],
             // ),
+            ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size.fromHeight(50),
+                ),
+                icon: const Icon(
+                  Icons.dangerous,
+                  size: 32,
+                ),
+                label: const Text('Yt tests'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => YtTests()),
+                  );
+                }),
           ],
         ),
       ),
