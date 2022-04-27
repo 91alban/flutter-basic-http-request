@@ -1,4 +1,4 @@
-import 'package:e_check_survey/screens/homepage_screen.dart';
+import 'package:e_check_survey/screens/surveys/homepage_screen.dart';
 import 'package:e_check_survey/screens/yt_tests.dart';
 import 'package:flutter/material.dart';
 import 'package:e_check_survey/services/api_service.dart';
